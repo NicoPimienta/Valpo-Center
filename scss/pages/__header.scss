@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-image: radial-gradient(circle at 99% 33%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 46% 16%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 99% 25%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 57% 88%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 86%,transparent 86%, transparent 100%),radial-gradient(circle at 82% 78%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 22%,transparent 22%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
+    padding-bottom: 115px;
+}
+
+
+.titulo { 
+    color: $amarilloMain; 
+    font-size: 4rem;
+    text-align: center;
+    background-color: black;
+    font-weight:bolder;
+    height: 1.3em;
+    letter-spacing: 0.1rem;
+    font-family: 'Times New Roman', sans-serif;
+    display: inline-block;
+    margin-left: 9px;
+    text-transform: uppercase;
+    
+}
+
+nav ul li {
+    list-style: none;
+    background-color: black;
+    letter-spacing: 0.1em;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Heebo', sans-serif;
+    position: relative;
+}
+
+a {
+    color: $amarilloAlt;
+    text-decoration: none;
+}
+
+
+li:hover .submenu {
+    display: block;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 25px;
+    border-right-width: 15px;
+    border-right-style: solid;
+}

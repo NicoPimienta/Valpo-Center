@@ -1,0 +1,87 @@
+/* ---------------------------PAGINA NOVEDADES--------------------------- */
+
+
+/* -------EDICION NOVEDADES GRID--------------- */
+
+@mixin novedad {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border: 2px solid;
+}
+
+
+#novImg {
+    max-width: 306px;
+    width: 100%;
+}
+
+#containerNov {
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    grid-template-rows: 3fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
+    justify-items: center;
+}
+
+.itemNov1 {
+    @include novedad;
+    background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 233414.png");
+}
+
+.itemNov2 {
+    @include novedad;
+    background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 233506.png");
+}
+.itemNov3 {
+    @include novedad;
+    background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 233556.jpg");
+}
+
+.itemNov4 {
+    @include novedad;
+    background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 234122.jpg");
+}
+
+.itemNov5 {
+    @include novedad;
+    background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 235058.jpg");
+}
+
+.itemNov6 {
+    @include novedad;
+    background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-23\ 111316.jpg");
+}
+
+.itemNov7 {
+    @include novedad;
+    background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-23\ 113707.jpg");
+}
+
+.itemNov8 {
+    @include novedad;
+    background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-23\ 114322.jpg");
+    margin-bottom: 30px;
+}
+
+
+$fondocolor: (
+    fondo1: #cc0c0c,
+    fondo2: #0c6fcce7,
+    fondo3: #0cc0c0,
+);
+
+@each $fondo, $color in $fondocolor {
+    .#{$fondo} {
+        color: $color
+    }
+}
+
+
+
+/* ---------------- gridboxes + ---------------- */
+.scale-up-ver-center {
+-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,uDAAuD;AAEvD,AAAA,aAAa,CAAC;EACN,UAAU,EAAE,uBAAuB;CAC1C;;AAED,AAAA,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC;EACR,KAAK,EAAE,KAAK;CACnB;;AAED,AAAA,mBAAmB,CAAC;EACZ,SAAS,EAAE,QAAQ;EACnB,WAAW,EAAE,MAAM;EACnB,mBAAmB,EAAE,IAAI;EACzB,gBAAgB,EAAE,IAAI;EACtB,WAAW,EAAE,IAAI;CACxB",
+    "sources": [
+        "../scss/pages/bs5.scss"
+    ],
+    "names": [],
+    "file": "bs5.css"
+}

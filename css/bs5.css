@@ -1,0 +1,19 @@
+/* ------------modificaciones de bootstrap---------- */
+.borderShadow {
+  -webkit-box-shadow: 0 4px 18px -2px #8e7e27;
+          box-shadow: 0 4px 18px -2px #8e7e27;
+}
+
+nav div div img {
+  width: 140px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+/*# sourceMappingURL=bs5.css.map */

@@ -1,0 +1,21 @@
+// Varibles colores: //
+$amarilloMain : #FFD600;
+$amarilloAlt: #e4c115c5;
+$blancoFooter: #fffffe;
+$formucolor: darkgoldenrod;
+$amarilloServ: #ffe066;
+$fuenteMain:  'Montserrat', sans-serif;
+$fuenteAlt: 'Roboto Condensed', sans-serif;
+
+
+
+@import "./pages/_header";
+@import "./pages/_index";
+@import "./pages/_actividades";
+@import "./pages/_servicios";
+@import "./pages/_novedades";
+@import "./pages/_contacto";
+@import "./pages/_footer";
+@import "./pages/_MediaQuery";
+@import "./pages/_fuentesycolor";
+@import "./pages/_bs5";
