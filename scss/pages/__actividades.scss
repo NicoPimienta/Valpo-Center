@@ -29,8 +29,20 @@
     font-style: italic;
 }
 
+.titulos-modal_colorSize{
+    font-size: 3.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.507em;
+    font-weight:800;
+}
+
+
+
 .titulo-modal-global{
-    @extend .titulos-modal_colorSize;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    letter-spacing: 0.507em;
+    font-weight:800;
     @extend .fuenteMontse;
 }
 
@@ -87,7 +99,7 @@
     padding-top: 6rem;
     padding-bottom: 6rem;
     text-align: center;}.portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 3rem;
 }
 .portfolio-modal .modal-content p.item-intro {

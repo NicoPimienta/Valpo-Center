@@ -78,6 +78,18 @@ li:hover .submenu {
   font-weight: 800;
   font-style: italic; }
 
+.titulos-modal_colorSize {
+  font-size: 3.6rem;
+  line-height: 3rem;
+  letter-spacing: 0.507em;
+  font-weight: 800; }
+
+.titulo-modal-global {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 0.507em;
+  font-weight: 800; }
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
@@ -131,7 +143,7 @@ li:hover .submenu {
   text-align: center; }
 
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 3rem; }
 
 .portfolio-modal .modal-content p.item-intro {
@@ -323,6 +335,10 @@ footer {
   .bd-placeholder-img-lg {
     font-size: 3.5rem; } }
 
+@media screen and (max-width: 992px) {
+  .h1-test3 {
+    font-size: 2.5em; } }
+
 .fuenteMontse, .h1-test3, .titulo-modal-global {
   font-family: 'Montserrat', sans-serif; }
 
@@ -331,12 +347,6 @@ footer {
 
 .card_background--color {
   background-color: #ffe066; }
-
-.titulos-modal_colorSize, .titulo-modal-global {
-  font-size: 3.6rem;
-  line-height: 3rem;
-  letter-spacing: 0.507em;
-  font-weight: 800; }
 
 /* ------------modificaciones de bootstrap---------- */
 .nav__borde--color {

@@ -23,3 +23,9 @@ header {
         font-size: 3.5rem;
 }
 }
+
+@media screen and (max-width: 992px) {
+        .h1-test3 {
+                font-size: 2.5em;
+        }
+}
