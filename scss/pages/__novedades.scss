@@ -14,6 +14,7 @@
 #novImg {
     max-width: 306px;
     width: 100%;
+    margin-left: 100px;
 }
 
 #containerNov {
@@ -30,13 +31,30 @@
     background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 233414.png");
 }
 
+.itemNov1:hover{
+    box-shadow: 0 4px 18px -2px #8e7e27;
+    border-color: #8e7e27;
+}
+
+
 .itemNov2 {
     @include novedad;
     background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 233506.png");
 }
+
+.itemNov2:hover{
+    box-shadow: 0 4px 18px -2px #8e7e27;
+    border-color: #8e7e27;
+}
+
 .itemNov3 {
     @include novedad;
     background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 233556.jpg");
+}
+
+.itemNov3:hover{
+    box-shadow: 0 4px 18px -2px #8e7e27;
+    border-color: #8e7e27;
 }
 
 .itemNov4 {
@@ -44,9 +62,19 @@
     background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 234122.jpg");
 }
 
+.itemNov4:hover{
+    box-shadow: 0 4px 18px -2px #8e7e27;
+    border-color: #8e7e27;
+}
+
 .itemNov5 {
     @include novedad;
     background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-22\ 235058.jpg");
+}
+
+.itemNov5:hover{
+    box-shadow: 0 4px 18px -2px #8e7e27;
+    border-color: #8e7e27;
 }
 
 .itemNov6 {
@@ -54,9 +82,19 @@
     background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-23\ 111316.jpg");
 }
 
+.itemNov6:hover{
+    box-shadow: 0 4px 18px -2px #8e7e27;
+    border-color: #8e7e27;
+}
+
 .itemNov7 {
     @include novedad;
     background-image: url("../imagenes/Captura\ de\ pantalla\ 2021-07-23\ 113707.jpg");
+}
+
+.itemNov7:hover{
+    box-shadow: 0 4px 18px -2px #8e7e27;
+    border-color: #8e7e27;
 }
 
 .itemNov8 {
@@ -65,6 +103,10 @@
     margin-bottom: 30px;
 }
 
+.itemNov8:hover{
+    box-shadow: 0 4px 18px -2px #8e7e27;
+    border-color: #8e7e27;
+}
 
 $fondocolor: (
     fondo1: #cc0c0c,

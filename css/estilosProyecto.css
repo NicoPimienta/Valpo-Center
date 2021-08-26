@@ -178,11 +178,16 @@ li:hover .submenu {
   font-size: 2rem;
   font-family: 'Roboto Condensed', sans-serif; }
 
+.btn:hover {
+  -webkit-animation: animate__shakeX;
+  animation: animate__shakeX; }
+
 /* ---------------------------PAGINA NOVEDADES--------------------------- */
 /* -------EDICION NOVEDADES GRID--------------- */
 #novImg {
   max-width: 306px;
-  width: 100%; }
+  width: 100%;
+  margin-left: 100px; }
 
 #containerNov {
   display: grid;
@@ -199,12 +204,20 @@ li:hover .submenu {
   border: 2px solid;
   background-image: url("../imagenes/Captura de pantalla 2021-07-22 233414.png"); }
 
+.itemNov1:hover {
+  box-shadow: 0 4px 18px -2px #8e7e27;
+  border-color: #8e7e27; }
+
 .itemNov2 {
   width: 200px;
   height: 200px;
   background-size: cover;
   border: 2px solid;
   background-image: url("../imagenes/Captura de pantalla 2021-07-22 233506.png"); }
+
+.itemNov2:hover {
+  box-shadow: 0 4px 18px -2px #8e7e27;
+  border-color: #8e7e27; }
 
 .itemNov3 {
   width: 200px;
@@ -213,12 +226,20 @@ li:hover .submenu {
   border: 2px solid;
   background-image: url("../imagenes/Captura de pantalla 2021-07-22 233556.jpg"); }
 
+.itemNov3:hover {
+  box-shadow: 0 4px 18px -2px #8e7e27;
+  border-color: #8e7e27; }
+
 .itemNov4 {
   width: 200px;
   height: 200px;
   background-size: cover;
   border: 2px solid;
   background-image: url("../imagenes/Captura de pantalla 2021-07-22 234122.jpg"); }
+
+.itemNov4:hover {
+  box-shadow: 0 4px 18px -2px #8e7e27;
+  border-color: #8e7e27; }
 
 .itemNov5 {
   width: 200px;
@@ -227,12 +248,20 @@ li:hover .submenu {
   border: 2px solid;
   background-image: url("../imagenes/Captura de pantalla 2021-07-22 235058.jpg"); }
 
+.itemNov5:hover {
+  box-shadow: 0 4px 18px -2px #8e7e27;
+  border-color: #8e7e27; }
+
 .itemNov6 {
   width: 200px;
   height: 200px;
   background-size: cover;
   border: 2px solid;
   background-image: url("../imagenes/Captura de pantalla 2021-07-23 111316.jpg"); }
+
+.itemNov6:hover {
+  box-shadow: 0 4px 18px -2px #8e7e27;
+  border-color: #8e7e27; }
 
 .itemNov7 {
   width: 200px;
@@ -241,6 +270,10 @@ li:hover .submenu {
   border: 2px solid;
   background-image: url("../imagenes/Captura de pantalla 2021-07-23 113707.jpg"); }
 
+.itemNov7:hover {
+  box-shadow: 0 4px 18px -2px #8e7e27;
+  border-color: #8e7e27; }
+
 .itemNov8 {
   width: 200px;
   height: 200px;
@@ -248,6 +281,10 @@ li:hover .submenu {
   border: 2px solid;
   background-image: url("../imagenes/Captura de pantalla 2021-07-23 114322.jpg");
   margin-bottom: 30px; }
+
+.itemNov8:hover {
+  box-shadow: 0 4px 18px -2px #8e7e27;
+  border-color: #8e7e27; }
 
 .fondo1 {
   color: #cc0c0c; }
@@ -304,6 +341,9 @@ form {
   margin-top: 30px;
   font-size: 1.8rem; }
 
+.mapsGoogle {
+  margin-bottom: 10px; }
+
 footer {
   text-align: center;
   font-weight: 700;
@@ -344,6 +384,10 @@ footer div ul li :hover {
 @media screen and (max-width: 992px) {
   .h1-test3 {
     font-size: 2.5em; } }
+
+@media screen and (max-width: 992px) {
+  .mapsGoogle {
+    margin-bottom: 40px; } }
 
 .fuenteMontse, .h1-test3, .titulo-modal-global {
   font-family: 'Montserrat', sans-serif; }
