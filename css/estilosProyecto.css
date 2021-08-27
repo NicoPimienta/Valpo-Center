@@ -173,11 +173,6 @@ li:hover .submenu {
   opacity: 0.3; }
 
 /* --------------------------- PAGINA SERVICIOS------------------------ */
-.parraServ {
-  color: #a7a9be;
-  font-size: 2rem;
-  font-family: 'Roboto Condensed', sans-serif; }
-
 .btn:hover {
   -webkit-animation: animate__shakeX;
   animation: animate__shakeX; }
@@ -302,35 +297,6 @@ li:hover .submenu {
 
 /* ------------------------PAGINA CONTACTO---------------------------- */
 /* ---------edicion de divs--------- */
-.div__contenedorContacto {
-  height: 260px;
-  width: 539px;
-  background: #685f2c;
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center; }
-
-.div-caja__infolugar {
-  background: #a7a9be;
-  flex-flow: row nowrap;
-  height: 230px;
-  width: 100px;
-  flex-basis: 200px; }
-
-.div-caja__redes {
-  background: #a7a9be;
-  flex-flow: row nowrap;
-  height: 230px;
-  width: 100px;
-  flex-basis: 200px; }
-
-.div-caja__pagos {
-  background: #a7a9be;
-  flex-flow: row nowrap;
-  height: 230px;
-  width: 100px;
-  flex-basis: 200px; }
-
 .form__titulo--mostaza {
   color: darkgoldenrod;
   text-transform: uppercase;
@@ -343,6 +309,9 @@ form {
 
 .mapsGoogle {
   margin-bottom: 10px; }
+
+.bg-cajas_color {
+  background-color: #FFD600; }
 
 footer {
   text-align: center;

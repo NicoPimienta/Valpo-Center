@@ -3,37 +3,6 @@
 /* ---------edicion de divs--------- */
 
 
-@mixin divcaja  {
-    background: #a7a9be;
-    flex-flow: row nowrap;
-    height: 230px;
-    width: 100px;
-    flex-basis: 200px;
-}
-
-.div__contenedorContacto {
-    height: 260px;
-    width: 539px;        
-    background: #685f2c;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-}
-
-
-.div-caja__infolugar {
-    @include divcaja;
-}
-
-.div-caja__redes {
-    @include divcaja;
-}
-
-.div-caja__pagos {
-    @include divcaja;
-}
-
-
 .form__titulo--mostaza {
     color: $formucolor;
     text-transform: uppercase;
@@ -48,4 +17,9 @@ form {
 
 .mapsGoogle {
     margin-bottom: 10px;
+}
+
+.bg-cajas_color{
+    background-color: $amarilloMain;
+
 }
