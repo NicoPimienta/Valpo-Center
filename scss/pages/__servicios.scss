@@ -5,3 +5,17 @@
     font-size: 2rem;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+.parallax {
+    /* The image used */
+    background-image: url("/imagenes/pexels-photo-791763.jpeg");
+
+    /* Set a specific height */
+    min-height: 150px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
