@@ -65,20 +65,20 @@
 <!-- FURMULARIO V2 -->
 
 
-<div class="row mb-4 ">
+<div class="row mb-4">
     <div class="col-md-6 border-end border-1 border-warning" id="form">
         <div class="campaign">
 <form method="POST" id="contact-form">
 <input type="hidden" name="_token" value="NNNxt64aacMCSJaqluUbmV9FpwO7mOySk14oQaiN">    <div class="form-row">
     <div class="col-md-3">
-        <label for="">Nombre</label>
+        <label class="fs-2" for="">Nombre</label>
         <input type="text" name="firstName" class="form-control" id="firstName" required="">
         <div class="invalid-feedback" id="errorFirstName">
 
         </div>
     </div>
     <div class="col-3">
-        <label for="">Apellido</label>
+        <label class="fs-2" for="">Apellido</label>
         <input type="text" name="lastName" id="lastName" class="form-control" required="">
         <div class="invalid-feedback" id="errorLastName">
 
@@ -87,46 +87,45 @@
 </div>
 <div class="form-row">
     <div class="col-md-3">
-        <label for="">DNI</label>
+        <label class="fs-2" for="">DNI</label>
         <input type="text" name="dni" id="dni" class="form-control" required="">
         <div class="invalid-feedback" id="errorDni">
 
         </div>
     </div>
     <div class="col-3">
-        <label for="">Telefono</label>
+        <label class="fs-2" for="">Telefono</label>
         <input type="tel" name="phone" id="phone" class="form-control" required="">
         <div class="invalid-feedback" id="errorPhone">
-
         </div>
     </div>
 </div>
 <div class="form-group mt-2 col-3">
-    <label for="">Email</label>
+    <label class="fs-2" for="">Email</label>
     <input type="email" name="email" id="email" class="form-control" required="">
     <div class="invalid-feedback" id="errorEmail">
-
     </div>
 </div>
+
 <div class="form-row">
     <div class="col-md-3">
-        <label for="">Sos Socio?</label>
+        <label class="fs-2" for="">Sos Socio?</label>
         <div class="switch-field form-group">
             <input type="radio" id="radio-one" name="member" value="1" checked="">
-            <label for="radio-one">Si</label>
+            <label class="fs-2" for="radio-one">Si</label>
             <input type="radio" id="radio-two" name="member" value="0">
-            <label for="radio-two">No</label>
+            <label class="fs-2" for="radio-two">No</label>
         </div>
     </div>
     <div class="col-md-3">
         <div class="form-group">
-            <label for="">Motivos del contacto:</label>
+            <label class="fs-2" for="">Motivos del contacto:</label>
             <select class="form-control" name="reason" id="reason">
-                <option selected="" disabled="" value="">Selecciona un motivo</option>
-                <option value="1">Quiero conocer los planes y costos</option>
-                <option value="2">Quiero realizar una consulta / sugerencia</option>
-                <option value="3">Quiero realizar un reclamo</option>
-                <option value="4">Quiero consultar por un servicio</option>
+                <option  selected="" disabled="" value="">Selecciona un motivo</option>
+                <option class="fs-5" value="1">Quiero conocer los planes y costos</option>
+                <option class="fs-5" value="2">Quiero realizar una consulta / sugerencia</option>
+                <option class="fs-5" value="3">Quiero realizar un reclamo</option>
+                <option class="fs-5" value="4">Quiero consultar por un servicio</option>
             </select>
             <div class="invalid-feedback" id="errorReason">
                 
@@ -134,23 +133,22 @@
         </div>
     </div>
 </div>
+
 <div class="form-group col-md-3">
     <label for="">Dejanos tu comentario:</label>
     <textarea class="form-control" name="comment" id="" rows="3" style="resize: none"></textarea>
 </div>
 
-<!-- editar botón -->
 
 <div class="form-row">
-    <div class="col-md-6">
-        <button type="button" class="btn btn-warning fw-bold" disabled="" id="buttonForm">Enviar</button>
+    <div class="col-md-6 mt-5">
+        <button class="btn btn-warning btn-lg" type="submit">Enviar</button>
+        <input class="btn btn-warning btn-lg" type="reset" value="Reset">
     </div>
 </div>
 </form></div>
+
     </div>
-
-
-<!-- editar completo el FAQ ACORDEON -->
 
 
 <div class="accordion col-md-6 g-5 mb-5" id="accordionExample">
