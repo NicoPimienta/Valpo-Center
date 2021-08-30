@@ -58,11 +58,8 @@ li:hover .submenu {
   margin: auto; }
 
 .parallax {
-  /* The image used */
   background-image: url("/imagenes/pexels-photo-791763.jpeg");
-  /* Set a specific height */
   min-height: 200px;
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
