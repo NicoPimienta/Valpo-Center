@@ -142,11 +142,33 @@
 
 <div class="form-row">
     <div class="col-md-6 mt-5">
-        <button class="btn btn-warning btn-lg" type="submit">Enviar</button>
+        <button class="btn btn-warning btn-lg" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button></button>
         <input class="btn btn-warning btn-lg" type="reset" value="Reset">
     </div>
 </div>
-</form></div>
+</form>
+</div>
+
+<!-- Modal para el formulario -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header card_background--color">
+                <h5 class="modal-title fs-1 card_background--color" id="exampleModalLabel">Enviado Correctamente!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        <div class="modal-body card_background--color">
+            <i class="bi bi-check-circle-fill" style="font-size: 2rem; color: black;">  En breve tendrás una respuesta.</i>
+        </div>
+        <div class="modal-footer card_background--color">
+            <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+
 
     </div>
 
