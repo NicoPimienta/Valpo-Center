@@ -333,6 +333,14 @@ form {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18); }
 
+.cardModal_background--color {
+  background: rgba(255, 214, 0, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18); }
+
 footer {
   text-align: center;
   font-weight: 700;
@@ -383,9 +391,6 @@ footer div ul li :hover {
 
 .fuenteRoboto, .portfolio-modal__ul {
   font-family: 'Roboto Condensed', sans-serif; }
-
-.card_background--color {
-  background-color: #ffe066; }
 
 /* ------------modificaciones de bootstrap---------- */
 .nav__borde--color {
