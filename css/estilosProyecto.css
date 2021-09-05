@@ -189,6 +189,9 @@ li:hover .submenu {
   -webkit-animation: animate__shakeX;
   animation: animate__shakeX; }
 
+.fondoServicios {
+  background-color: #ffe066; }
+
 /* ---------------------------PAGINA NOVEDADES--------------------------- */
 /* -------EDICION NOVEDADES GRID--------------- */
 #novImg {
