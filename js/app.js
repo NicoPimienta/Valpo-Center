@@ -61,6 +61,7 @@ const indiceCorporal = () => {
     let altura = parseInt(prompt('Ingrese su altura'))
     let resultado = Math.round( peso / (altura * altura)*10000)
     alert('hola' + ' ' + pesoActi[0].preguntarNombre() + ' su IMC es de' + " " + resultado)
+    alert(`hola ${pesoActi[0].preguntarNombre()} `)
     nivelPeso(resultado)
 }
 
@@ -91,3 +92,67 @@ const nivelPeso = (resultado) => {
 
 
 // agregar a futuro un switch para elección de profesores x horario.
+
+
+
+
+
+
+
+// ============ DOM ===============
+
+const cuerpoApp = document.getElementById ('cuerpo')
+const contenedor = document.getElementsByClassName('contenedor')
+
+cuerpoApp.innerHTML = `<h1><strong>Indice de masa corporal</strong></h1>`
+cuerpoApp.classList.add("fondo")
+
+
+document.body.appendChild(cuerpoApp);
+
+
+// ABAAJO ENTREGABLE (poner en comentario despues de los "=")
+
+let printNombre = prompt('Ingrese su nombre')
+
+const pedirInfo1 = document.createElement('p')
+
+pedirInfo1.innerHTML = (`<i>Hola ${printNombre}!! , nuestro staff se conforma por
+
+${profesores.join(" , ")} , ${Kinesiologos.join(" , ")} </i> `)
+
+
+pedirInfo1.classList.add("fondo")
+
+document.body.append(pedirInfo1)
+
+
+
+// ========================================
+
+
+// PASARLO A BOOTSTRAP
+
+
+// const inputs = document.createElement('input')
+// const boton = document.createElement('button')
+// const textos = document.createElement('p')
+
+
+// inputs.setAttribute = ("type", "text")
+// inputs.innerHTML = ("Ingresar nombre")
+// boton.innerHTML = "Enviar"
+// textos.innerHTML = "Ingrese su nombre"
+// inputs.classList.add("inputCSS")
+// boton.classList.add("botonCSS")
+// textos.classList.add("textoCSS")
+
+
+// document.body.append(inputs, boton, textos) 
+
+
+
+
+
+
+// console.log(contenedor);
