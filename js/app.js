@@ -100,6 +100,7 @@ const nivelPeso = (resultado) => {
 
 
 // ============ DOM ===============
+// ABAAJO ENTREGABLE (poner en comentario despues de los "=")
 
 const cuerpoApp = document.getElementById ('cuerpo')
 const contenedor = document.getElementsByClassName('contenedor')
@@ -111,7 +112,6 @@ cuerpoApp.classList.add("fondo")
 document.body.appendChild(cuerpoApp);
 
 
-// ABAAJO ENTREGABLE (poner en comentario despues de los "=")
 
 let printNombre = prompt('Ingrese su nombre')
 
@@ -134,25 +134,49 @@ document.body.append(pedirInfo1)
 // PASARLO A BOOTSTRAP
 
 
-// const inputs = document.createElement('input')
-// const boton = document.createElement('button')
-// const textos = document.createElement('p')
+// 1.Crear el contenedor- x
+// 2.Crear los textos - x
+// 3. Crear los inputs (usar los ranges de BS) -------- Agregar formu común, agregar Range cuando se vea jQuery
+// 4. Agregar un botón de enviar (Via BS) - x
+// 5. Darle color
+// PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/)
+
+// const contenedor = document.querySelector('.container .row')
+
+// REEMPLAZAR INPUTS DE TEXTOS POR RANGE'S
 
 
-// inputs.setAttribute = ("type", "text")
-// inputs.innerHTML = ("Ingresar nombre")
-// boton.innerHTML = "Enviar"
-// textos.innerHTML = "Ingrese su nombre"
-// inputs.classList.add("inputCSS")
-// boton.classList.add("botonCSS")
-// textos.classList.add("textoCSS")
+// const formulario = document.createElement('article')
+//     formulario.classList.add('card', 'col-12', 'bg-warning')
+//     formulario.innerHTML= `
+//     <h1 class="display-4 text-center">Conocé tu masa corporal</h1>
+//     <p class="text-muted fs-2 text-center">El índice de masa corporal (IMC) es una razón matemática que asocia la masa y la talla de un individuo, ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet. </p>
+//     <div class="input-group mb-5">
+//     <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+//     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+//     </div>
+    
+//     <div class="input-group mb-5 ">
+//     <span class="input-group-text" id="inputGroup-sizing-default">Peso</span>
+//     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+//     </div>
+
+//     <div class="input-group mb-5">
+//     <span class="input-group-text" id="inputGroup-sizing-default">Altura</span>
+//     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+//     </div>
+
+//     <button type="button" class="btn btn-secondary mb-5"><b>Ver Resultado</b></button>
+
+//     `
 
 
-// document.body.append(inputs, boton, textos) 
+// contenedor.append(formulario)
 
 
 
 
 
 
-// console.log(contenedor);
+
+// console.log(formulario);
