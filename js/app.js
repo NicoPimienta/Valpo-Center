@@ -53,21 +53,6 @@ const staff = profesores.concat(Kinesiologos)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // =============== Estructura principal de la app. ============
 
 // ============ DOM ===============
@@ -83,7 +68,7 @@ const formulario = document.createElement('form')
 formulario.classList.add('card', 'col-12', 'bg-warning' , 'p-5')
 formulario.setAttribute("id", "formu");
 formulario.innerHTML = `
-<h1 class="display-4 text-center">Conocé tu masa corporal</h1>
+<h1 class="display-2 text-center">Conocé tu masa corporal</h1>
 <p class="text-muted fs-2 text-center">El índice de masa corporal (IMC) es una razón matemática que asocia la masa y la talla de un individuo, ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet. </p>
 <div class="input-group mb-5">
 <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
@@ -105,10 +90,10 @@ formulario.innerHTML = `
 contenedor.append(formulario)
 
 
-// Botón
+// Botón de resultados
 
 const boton = document.createElement('button')
-boton.classList.add('btn', 'btn-secondary' , 'mb-5')
+boton.classList.add('btn', 'btn-secondary' , 'mb-5' , 'p-2')
 boton.innerHTML = ` <button  type="button" id="boton"><b>Ver Resultado</b></button> `
 
 
@@ -205,8 +190,6 @@ const getAltura = document.getElementById('inputAltura')
 
 
 
-
-
 // PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/)
 // REEMPLAZAR INPUTS DE TEXTOS POR RANGE'S
 
@@ -216,3 +199,69 @@ const getAltura = document.getElementById('inputAltura')
 //  Crear los inputs (usar los ranges de BS) -------- Agregar formu común, agregar Range cuando se vea jQuery
 
 //Crear un modal que pida e-mail.
+
+
+
+
+// ====================DESAFIO COMPLEMENTARIO=======================
+
+
+
+const listaArticulos = [
+
+{
+    Titulo: "Articulo 1" ,
+    Subtitulo: "Un gran subtitulo 1",
+    Parrafo: "Lorem ipsum dolor sit amet.",
+
+},
+{
+    Titulo: "Articulo 2" ,
+    Subtitulo : "Un gran subtitulo 2" ,
+    Parrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sed.",
+},
+{
+    Titulo: "Articulo 3" ,
+    Subtitulo : "Un gran subtitulo 3" ,
+    Parrafo: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, odit. Recusandae autem iste sunt harum.",
+
+},
+{
+    Titulo: "Articulo 4 " ,
+    Subtitulo : "Un gran subtitulo 4" ,
+    Parrafo: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam corrupti amet error explicabo, rerum dolore laudantium molestiae quia veritatis.",
+
+},
+{
+    Titulo: "Articulo 5 " ,
+    Subtitulo : "Un gran subtitulo 5" ,
+    Parrafo: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint corrupti cupiditate earum qui officiis, dolor suscipit excepturi, corporis beatae ipsa optio debitis sed natus ducimus libero consequuntur non atque.",
+},
+]
+
+
+listaArticulos.forEach((articulo) => {
+const colapsar = document.createElement('div')
+    colapsar.classList.add ('card', 'col-5' , 'm-3' , 'p-3')
+    colapsar.innerHTML = `
+    <div class="card-header">
+    ${articulo.Titulo}
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">${articulo.Subtitulo}</h5>
+    <p class="card-text">${articulo.Parrafo}.</p>
+    </div>
+</div>
+    
+    `
+
+    document.body.append(colapsar)
+
+})
+
+
+
+
+
+
+
