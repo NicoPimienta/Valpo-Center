@@ -5,6 +5,8 @@
 
 // Constructor & Arrays
 
+const profesores = ['Victoria Amoroso', 'Geronimo Martin' , 'Luna Gancedo', 'Jonatan Demichelis']
+
 
 class PesoRef {
     constructor (condicion,actividadRecom,intensidad) {
@@ -13,10 +15,9 @@ class PesoRef {
         this.intensidad = intensidad
     }
     // Metodo
-    preguntarNombre() {
-        let nombre = prompt('Ingrese su nombre')
-        
-        return nombre
+    profesores1() {
+        profesor = []
+        profesores.push(0)
     }
     
 }
@@ -34,12 +35,8 @@ localStorage.setItem('pesoActi', JSON.stringify(pesoActi))
 
 
 
-const profesores = ['Victoria Amoroso', 'Geronimo Martin' , 'Luna Gancedo', 'Jonatan Demichelis']
 
 
-const Kinesiologos = []
-
-Kinesiologos.push('David Garcia', 'Luca Pontelli')
 
 
 const staff = profesores.concat(Kinesiologos)
@@ -93,8 +90,10 @@ contenedor.append(formulario)
 // Botón de resultados
 
 const boton = document.createElement('button')
-boton.classList.add('btn', 'btn-secondary' , 'mb-5' , 'p-2')
-boton.innerHTML = ` <button  type="button" id="boton"><b>Ver Resultado</b></button> `
+boton.classList.add('btn', 'btn-secondary' , 'mb-5' , 'p-2', 'fw-bold')
+boton.setAttribute("id", "boton")
+boton.innerText = ` Ver Resultados `
+
 
 
 formulario.append(boton)
@@ -152,16 +151,16 @@ const botonDeReset = document.getElementById('Resetear')
 const nivelPeso = (resultado , valorNombre) => {
     if (resultado <= 18){
         divResultado.innerHTML = `Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con ${pesoActi[0].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[0].actividadRecom} , que tiene intensidad: ${pesoActi[0].intensidad}</b> `;
+        <b>Estás con ${pesoActi[0].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[0].actividadRecom} , que tiene intensidad: ${pesoActi[0].intensidad} <br> Profesor: ${profesores[0]}</b> `;
     } else if ((resultado > 18) && (resultado <= 25)){
         divResultado.innerHTML = `<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás en un peso ${pesoActi[1].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[1].actividadRecom} , que tiene intensidad: ${pesoActi[1].intensidad}</b>`
+        <b>Estás en un peso ${pesoActi[1].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[1].actividadRecom} , que tiene intensidad: ${pesoActi[1].intensidad} <br> Profesores: ${profesores[0]} & ${profesores[1]} </b>`
     } else if ((resultado > 25) && (resultado <= 29)) {
         divResultado.innerHTML =`<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con ${pesoActi[2].condicion}</b> .<b>Nuestra recomendación de actividad : ${pesoActi[2].actividadRecom} , que tiene intensidad: ${pesoActi[2].intensidad}</b> `
+        <b>Estás con ${pesoActi[2].condicion}</b> .<b>Nuestra recomendación de actividad : ${pesoActi[2].actividadRecom} , que tiene intensidad: ${pesoActi[2].intensidad} <br> Profesores: ${profesores[0]}, ${profesores[1]} & ${profesores[3]} </b>`
     } else if (resultado >= 30) {
         divResultado.innerHTML = `<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con  ${pesoActi[3].condicion}</b>. <b>Nuestra recomendación de actividad : ${pesoActi[3].actividadRecom} , que tiene intensidad: ${pesoActi[3].intensidad}</b>`
+        <b>Estás con  ${pesoActi[3].condicion}</b>. <b>Nuestra recomendación de actividad : ${pesoActi[3].actividadRecom} , que tiene intensidad: ${pesoActi[3].intensidad} <br> Profesor: ${profesores[2]} </b>`
     } else {
         divResultado.innerHTML = ``;
     }
@@ -199,69 +198,3 @@ const getAltura = document.getElementById('inputAltura')
 //  Crear los inputs (usar los ranges de BS) -------- Agregar formu común, agregar Range cuando se vea jQuery
 
 //Crear un modal que pida e-mail.
-
-
-
-
-// ====================DESAFIO COMPLEMENTARIO=======================
-
-
-
-const listaArticulos = [
-
-{
-    Titulo: "Articulo 1" ,
-    Subtitulo: "Un gran subtitulo 1",
-    Parrafo: "Lorem ipsum dolor sit amet.",
-
-},
-{
-    Titulo: "Articulo 2" ,
-    Subtitulo : "Un gran subtitulo 2" ,
-    Parrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sed.",
-},
-{
-    Titulo: "Articulo 3" ,
-    Subtitulo : "Un gran subtitulo 3" ,
-    Parrafo: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, odit. Recusandae autem iste sunt harum.",
-
-},
-{
-    Titulo: "Articulo 4 " ,
-    Subtitulo : "Un gran subtitulo 4" ,
-    Parrafo: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam corrupti amet error explicabo, rerum dolore laudantium molestiae quia veritatis.",
-
-},
-{
-    Titulo: "Articulo 5 " ,
-    Subtitulo : "Un gran subtitulo 5" ,
-    Parrafo: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint corrupti cupiditate earum qui officiis, dolor suscipit excepturi, corporis beatae ipsa optio debitis sed natus ducimus libero consequuntur non atque.",
-},
-]
-
-
-listaArticulos.forEach((articulo) => {
-const colapsar = document.createElement('div')
-    colapsar.classList.add ('card', 'col-5' , 'm-3' , 'p-3')
-    colapsar.innerHTML = `
-    <div class="card-header">
-    ${articulo.Titulo}
-    </div>
-    <div class="card-body">
-    <h5 class="card-title">${articulo.Subtitulo}</h5>
-    <p class="card-text">${articulo.Parrafo}.</p>
-    </div>
-</div>
-    
-    `
-
-    document.body.append(colapsar)
-
-})
-
-
-
-
-
-
-
