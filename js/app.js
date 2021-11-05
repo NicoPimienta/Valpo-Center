@@ -14,12 +14,8 @@ class PesoRef {
         this.actividadRecom = actividadRecom
         this.intensidad = intensidad
     }
-    // Metodo
-    profesores1() {
-        profesor = []
-        profesores.push(0)
-    }
     
+
 }
 
 // Los valores de intensidad son aproximados y varian dependiendo la persona (Pienso aclararlo en algun lugar de la aplicación)
@@ -31,22 +27,6 @@ new PesoRef ("Sobre peso", "actividades aerobicas y de fuerza","Alta"),
 new PesoRef ("Obesidad","Spinning o Entrenamiento Personalizado","Media-Alta"),
 ]
 localStorage.setItem('pesoActi', JSON.stringify(pesoActi))
-
-
-
-
-
-
-
-
-const staff = profesores.concat(Kinesiologos)
-
-// console.log(staff);
-
-
-// Los arrays de profesores y Kinesiologos estaban para el ejercicio de Arrays, aun así los deje por que probablemente los use más adelante (o no).
-
-
 
 
 
@@ -104,7 +84,7 @@ formulario.append(boton)
 
 const divResultado = document.createElement('div')
 divResultado.classList.add('card', 'col-12', 'bg-dark' , 'p-5')
-// divResultado.innerHTML = `<i class="bi bi-info" data-bs-toggle="tooltip" data-bs-html="true" title="Los valores de intensidad son aproximados y varian dependiendo la persona" style="font-size: xx-large"></i>`
+// Implementar a lo ultimo : divResultado.innerHTML = `<i class="bi bi-info" data-bs-toggle="tooltip" data-bs-html="true" title="Los valores de intensidad son aproximados y varian dependiendo la persona" style="font-size: xx-large"></i>`
 formulario.append(divResultado)
 
 
@@ -160,7 +140,7 @@ const nivelPeso = (resultado , valorNombre) => {
         <b>Estás con ${pesoActi[2].condicion}</b> .<b>Nuestra recomendación de actividad : ${pesoActi[2].actividadRecom} , que tiene intensidad: ${pesoActi[2].intensidad} <br> Profesores: ${profesores[0]}, ${profesores[1]} & ${profesores[3]} </b>`
     } else if (resultado >= 30) {
         divResultado.innerHTML = `<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con  ${pesoActi[3].condicion}</b>. <b>Nuestra recomendación de actividad : ${pesoActi[3].actividadRecom} , que tiene intensidad: ${pesoActi[3].intensidad} <br> Profesor: ${profesores[2]} </b>`
+        <b>Estás con  ${pesoActi[3].condicion}</b>. <b>Nuestra recomendación de actividad : ${pesoActi[3].actividadRecom} , que tiene intensidad: ${pesoActi[3].intensidad} <br> Profesor: ${profesores[2]}  </b>`
     } else {
         divResultado.innerHTML = ``;
     }
@@ -192,9 +172,11 @@ const getAltura = document.getElementById('inputAltura')
 // PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/)
 // REEMPLAZAR INPUTS DE TEXTOS POR RANGE'S
 
-// agregar tipo modal de clase actividades en resultado
+// agregar imagen de actividad *
 
 
-//  Crear los inputs (usar los ranges de BS) -------- Agregar formu común, agregar Range cuando se vea jQuery
+//  Crear los inputs -x (usar los ranges de BS) -------- Agregar formu común -x, agregar Range cuando se vea jQuery
 
-//Crear un modal que pida e-mail.
+//Crear un modal que pida e-mail (en el final)
+
+
