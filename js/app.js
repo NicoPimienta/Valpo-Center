@@ -48,19 +48,18 @@ formulario.innerHTML = `
 <h1 class="display-2 text-center">Conocé tu masa corporal</h1>
 <p class="text-muted fs-2 text-center">El índice de masa corporal (IMC) es una razón matemática que asocia la masa y la talla de un individuo, ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet. </p>
 <div class="input-group mb-5">
-<span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
 <input type="text" id="inputNombre" value= "" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 
-<div class="input-group  mb-5 ">
-<span class="input-group-text" id="inputGroup-sizing-default">Peso</span>
-<input type="number" id="inputPeso" value= "" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-</div>
 
-<div class="input-group mb-5">
-<span class="input-group-text" id="inputGroup-sizing-default">Altura</span>
-<input type="number" id="inputAltura" value= "" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-</div>
+<label for="amount">Ingrese su peso:</label>
+<input type="text" id="inputPeso" class= "mb-2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+<div id="slider-range-min"></div>
+
+
+<label for="amount">Ingrese su Altura:</label>
+<input type="text" id="inputAltura" class= "mt-2 mb-2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+<div id="slider-range-min-2"></div>
 
 `
 
@@ -70,7 +69,7 @@ contenedor.append(formulario)
 // Botón de resultados
 
 const boton = document.createElement('button')
-boton.classList.add('btn', 'btn-secondary' , 'mb-5' , 'p-2', 'fw-bold')
+boton.classList.add('btn', 'btn-secondary' , 'mb-5' , 'p-2', 'fw-bold' , 'mt-5')
 boton.setAttribute("id", "boton")
 boton.innerText = ` Ver Resultados `
 
@@ -147,13 +146,45 @@ const nivelPeso = (resultado , valorNombre) => {
 }
 
 
-// Reset de los inpunts
+// Reset de los inpunts (CAMBIAR ESTE A jQuery )
 let inputsTodos = document.querySelectorAll('input')
 
 botonDeReset.addEventListener('click', () => {
     inputsTodos.forEach(input => input.value = '')
 
 })
+
+
+
+// Range del peso
+$( function() {
+    $( "#slider-range-min" ).slider({
+    range: "min",
+        value: 37,
+        min: 1,
+        max: 300,
+        slide: function( event, ui ) {
+        $( "#inputPeso" ).val(  ui.value + "KG");
+    }
+    });
+    $( "#inputPeso" ).val(  $( "#slider-range-min" ).slider( "value" ) + "KG" );
+} );
+
+//Range de la altura
+
+$( function() {
+    $( "#slider-range-min-2" ).slider({
+    range: "min",
+        value: 37,
+        min: 130,
+        max: 220,
+        slide: function( event, ui ) {
+        $( "#inputAltura" ).val(  ui.value + "cm");
+    }
+    });
+    $( "#inputAltura" ).val(  $( "#slider-range-min-2" ).slider( "value" ) + "cm" );
+} );
+
 
 
 
@@ -170,7 +201,7 @@ const getAltura = document.getElementById('inputAltura')
 
 
 // PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/)
-// REEMPLAZAR INPUTS DE TEXTOS POR RANGE'S
+// REEMPLAZAR INPUTS DE TEXTOS POR RANGE'S -x
 
 // agregar imagen de actividad *
 
@@ -178,5 +209,3 @@ const getAltura = document.getElementById('inputAltura')
 //  Crear los inputs -x (usar los ranges de BS) -------- Agregar formu común -x, agregar Range cuando se vea jQuery
 
 //Crear un modal que pida e-mail (en el final)
-
-
