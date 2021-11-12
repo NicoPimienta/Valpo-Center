@@ -3,6 +3,9 @@
 
 
 
+
+
+
 // Constructor & Arrays
 
 const profesores = ['Victoria Amoroso', 'Geronimo Martin' , 'Luna Gancedo', 'Jonatan Demichelis']
@@ -48,7 +51,8 @@ formulario.innerHTML = `
 <h1 class="display-2 text-center">Conocé tu masa corporal</h1>
 <p class="text-muted fs-2 text-center">El índice de masa corporal (IMC) es una razón matemática que asocia la masa y la talla de un individuo, ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet. </p>
 <div class="input-group mb-5">
-<input type="text" id="inputNombre" value= "" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+<label for="inputNombre"></label>
+<input type="text"  placeholder="Ingrese su nombre" id="inputNombre" value= "" class="form-control p-2 fs-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 
 
@@ -146,7 +150,7 @@ const nivelPeso = (resultado , valorNombre) => {
 }
 
 
-// Reset de los inpunts (CAMBIAR ESTE A jQuery )
+
 let inputsTodos = document.querySelectorAll('input')
 
 botonDeReset.addEventListener('click', () => {
@@ -154,13 +158,30 @@ botonDeReset.addEventListener('click', () => {
 
 })
 
+// Check de nombre
+
+$('#inputNombre').change( () => {
+    const valor = $('#inputNombre').val()
+
+    if ( valor == ' ' || valor == null ) {
+        $('#inputNombre').addClass('invalido')
+        $('#inputNombre').removeClass('valido')
+    } else if (valor.length <= 3 ) {
+        $('#inputNombre').addClass('invalido')
+        $('#inputNombre').removeClass('valido')
+    } else {
+        $('#inputNombre').addClass('valido')
+    }
+} )
+
+
 
 
 // Range del peso
 $( function() {
     $( "#slider-range-min" ).slider({
     range: "min",
-        value: 37,
+        value: 40,
         min: 1,
         max: 300,
         slide: function( event, ui ) {
@@ -175,7 +196,7 @@ $( function() {
 $( function() {
     $( "#slider-range-min-2" ).slider({
     range: "min",
-        value: 37,
+        value: 140,
         min: 130,
         max: 220,
         slide: function( event, ui ) {
@@ -201,11 +222,10 @@ const getAltura = document.getElementById('inputAltura')
 
 
 // PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/)
-// REEMPLAZAR INPUTS DE TEXTOS POR RANGE'S -x
+
 
 // agregar imagen de actividad *
 
 
-//  Crear los inputs -x (usar los ranges de BS) -------- Agregar formu común -x, agregar Range cuando se vea jQuery
 
 //Crear un modal que pida e-mail (en el final)

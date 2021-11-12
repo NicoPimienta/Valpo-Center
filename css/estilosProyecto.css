@@ -443,12 +443,13 @@ nav div div img {
   display: flex;
   justify-content: center; }
 
-.botonCSS {
-  align-items: center;
-  display: flex;
-  justify-content: center; }
-
 .textoCSS {
   align-items: center;
   display: flex;
   justify-content: center; }
+
+.valido {
+  border: 2px solid green; }
+
+.invalido {
+  border: 2px solid red; }
