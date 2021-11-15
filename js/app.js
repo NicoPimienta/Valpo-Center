@@ -48,7 +48,7 @@ const formulario = document.createElement('form')
 formulario.classList.add('card', 'col-12', 'bg-warning' , 'p-5')
 formulario.setAttribute("id", "formu");
 formulario.innerHTML = `
-<h1 class="display-2 text-center">Conocé tu masa corporal</h1>
+<h1 class="display-2 text-center" id="tituloApp">Conocé tu masa corporal</h1>
 <p class="text-muted fs-2 text-center">El índice de masa corporal (IMC) es una razón matemática que asocia la masa y la talla de un individuo, ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet. </p>
 <div class="input-group mb-5">
 <label for="inputNombre"></label>
@@ -82,13 +82,25 @@ boton.innerText = ` Ver Resultados `
 formulario.append(boton)
 
 
-
 // Display donde se muestra el resultado
 
 const divResultado = document.createElement('div')
 divResultado.classList.add('card', 'col-12', 'bg-dark' , 'p-5')
+divResultado.style.display = 'none'
+divResultado.setAttribute("id" , "divResultado")
 // Implementar a lo ultimo : divResultado.innerHTML = `<i class="bi bi-info" data-bs-toggle="tooltip" data-bs-html="true" title="Los valores de intensidad son aproximados y varian dependiendo la persona" style="font-size: xx-large"></i>`
 formulario.append(divResultado)
+
+// Fade in para mostrar el resultado
+
+
+
+$('#boton').click(() => {
+    $('#divResultado').fadeIn('slow')
+})
+
+
+
 
 
 const botonReset = document.createElement('button')
@@ -97,6 +109,7 @@ botonReset.setAttribute("id", "Resetear");
 botonReset.innerText = `Reset`
 
 formulario.append(botonReset)
+
 
 
 
@@ -150,12 +163,14 @@ const nivelPeso = (resultado , valorNombre) => {
 }
 
 
-
+// Reseteo de inputs
 let inputsTodos = document.querySelectorAll('input')
+
+
 
 botonDeReset.addEventListener('click', () => {
     inputsTodos.forEach(input => input.value = '')
-
+    $('#divResultado').css('display', 'none')
 })
 
 // Check de nombre
@@ -221,11 +236,23 @@ const getAltura = document.getElementById('inputAltura')
 
 
 
+// ======== Animación del titulo============ 
+
+
+$('#tituloApp').animate({
+    fontSize: '9rem'
+}, 2000, () => {
+    $('#tituloApp').animate({
+        fontSize: '5rem'
+
+    }, 2000)
+} )
+
+
+
 // PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/)
 
 
 // agregar imagen de actividad *
 
-
-
-//Crear un modal que pida e-mail (en el final)
+// modal si hace falta
