@@ -147,16 +147,24 @@ const botonDeReset = document.getElementById('Resetear')
 const nivelPeso = (resultado , valorNombre) => {
     if (resultado <= 18){
         divResultado.innerHTML = `Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con ${pesoActi[0].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[0].actividadRecom} , que tiene intensidad: ${pesoActi[0].intensidad} <br> Profesor: ${profesores[0]}</b> `;
+        <b>Estás con ${pesoActi[0].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[0].actividadRecom} , que tiene intensidad: ${pesoActi[0].intensidad} <br> Profesor: ${profesores[0]}</b> <br> <div class="progress">
+        <div class="progress-bar bg-secondary.bg-gradient" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Bajo Peso</span></div>
+      </div> `;
     } else if ((resultado > 18) && (resultado <= 25)){
         divResultado.innerHTML = `<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás en un peso ${pesoActi[1].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[1].actividadRecom} , que tiene intensidad: ${pesoActi[1].intensidad} <br> Profesores: ${profesores[0]} & ${profesores[1]} </b>`
+        <b>Estás en un peso ${pesoActi[1].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[1].actividadRecom} , que tiene intensidad: ${pesoActi[1].intensidad} <br> Profesores: ${profesores[0]} & ${profesores[1]} </b> <br> <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Normal/ideal</span></div>
+      </div>`
     } else if ((resultado > 25) && (resultado <= 29)) {
         divResultado.innerHTML =`<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con ${pesoActi[2].condicion}</b> .<b>Nuestra recomendación de actividad : ${pesoActi[2].actividadRecom} , que tiene intensidad: ${pesoActi[2].intensidad} <br> Profesores: ${profesores[0]}, ${profesores[1]} & ${profesores[3]} </b>`
+        <b>Estás con ${pesoActi[2].condicion}</b> .<b>Nuestra recomendación de actividad : ${pesoActi[2].actividadRecom} , que tiene intensidad: ${pesoActi[2].intensidad} <br> Profesores: ${profesores[0]}, ${profesores[1]} & ${profesores[3]} </b> <br> <div class="progress">
+        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Sobre-Peso</span></div>
+      </div>`
     } else if (resultado >= 30) {
         divResultado.innerHTML = `<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con  ${pesoActi[3].condicion}</b>. <b>Nuestra recomendación de actividad : ${pesoActi[3].actividadRecom} , que tiene intensidad: ${pesoActi[3].intensidad} <br> Profesor: ${profesores[2]}  </b>`
+        <b>Estás con  ${pesoActi[3].condicion}</b>. <b>Nuestra recomendación de actividad : ${pesoActi[3].actividadRecom} , que tiene intensidad: ${pesoActi[3].intensidad} <br> Profesor: ${profesores[2]}  </b> <br> <div class="progress">
+        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Obesidad</span></div>
+      </div>`
     } else {
         divResultado.innerHTML = ``;
     }
@@ -249,10 +257,20 @@ $('#tituloApp').animate({
 } )
 
 
+// anidación de JSON
 
-// PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/)
+let global = {}
+
+fetch('../js/resultado.json')
+    .then ((resp) => resp.json())
+    
+    .then ((data) => {
+    // console.log(data)
+
+        global = data
+    
+    })
 
 
-// agregar imagen de actividad *
+// PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/) -x
 
-// modal si hace falta

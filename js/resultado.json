@@ -1,0 +1,32 @@
+[
+    {
+        "condicion" : "Bajo de Peso",
+        "actividadRecom" : "Entrenamiento Personalizado",
+        "intensidad" : "Media"
+
+    },
+
+    {
+        "condicion" : "Normal/Ideal",
+        "actividadRecom" : "Entrenamiento Funcional",
+        "intensidad" : "Media-Alta"
+
+    },
+
+    {
+        "condicion" : "Sobre peso",
+        "actividadRecom" : "actividades aerobicas y de fuerza",
+        "intensidad" : "Alta"
+
+    },
+
+    {
+        "condicion" : "Obesidad",
+        "actividadRecom" : "Spinning o Entrenamiento Personalizado",
+        "intensidad" : "Media-alta"
+    }
+]
+
+
+
+
