@@ -10,26 +10,27 @@
 
 const profesores = ['Victoria Amoroso', 'Geronimo Martin' , 'Luna Gancedo', 'Jonatan Demichelis']
 
+// borrar
 
-class PesoRef {
-    constructor (condicion,actividadRecom,intensidad) {
-        this.condicion = condicion
-        this.actividadRecom = actividadRecom
-        this.intensidad = intensidad
-    }
+// class PesoRef {
+//     constructor (condicion,actividadRecom,intensidad) {
+//         this.condicion = condicion
+//         this.actividadRecom = actividadRecom
+//         this.intensidad = intensidad
+//     }
     
 
-}
+// }
 
 // Los valores de intensidad son aproximados y varian dependiendo la persona (Pienso aclararlo en algun lugar de la aplicación)
 
-const pesoActi = [
-new PesoRef ("Bajo de peso", "Entrenamiento Personalizado", "Media"),
-new PesoRef ("Normal/Ideal", "Entrenamiento Funcional","Media-Alta"),
-new PesoRef ("Sobre peso", "actividades aerobicas y de fuerza","Alta"),
-new PesoRef ("Obesidad","Spinning o Entrenamiento Personalizado","Media-Alta"),
-]
-localStorage.setItem('pesoActi', JSON.stringify(pesoActi))
+// const pesoActi = [
+// new PesoRef ("Bajo de peso", "Entrenamiento Personalizado", "Media"),
+// new PesoRef ("Normal/Ideal", "Entrenamiento Funcional","Media-Alta"),
+// new PesoRef ("Sobre peso", "actividades aerobicas y de fuerza","Alta"),
+// new PesoRef ("Obesidad","Spinning o Entrenamiento Personalizado","Media-Alta"),
+// ]
+// localStorage.setItem('pesoActi', JSON.stringify(pesoActi))
 
 
 
@@ -147,24 +148,24 @@ const botonDeReset = document.getElementById('Resetear')
 const nivelPeso = (resultado , valorNombre) => {
     if (resultado <= 18){
         divResultado.innerHTML = `Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con ${pesoActi[0].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[0].actividadRecom} , que tiene intensidad: ${pesoActi[0].intensidad} <br> Profesor: ${profesores[0]}</b> <br> <div class="progress">
+        <b>Estás con ${global[0].condicion}</b> <b>Nuestra recomendación de actividad : ${global[0].actividadRecom} , que tiene intensidad: ${global[0].intensidad} <br> Profesor: ${profesores[0]}</b> <br> <div class="progress">
         <div class="progress-bar bg-secondary.bg-gradient" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Bajo Peso</span></div>
-      </div> `;
+            </div> `;
     } else if ((resultado > 18) && (resultado <= 25)){
         divResultado.innerHTML = `<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás en un peso ${pesoActi[1].condicion}</b> <b>Nuestra recomendación de actividad : ${pesoActi[1].actividadRecom} , que tiene intensidad: ${pesoActi[1].intensidad} <br> Profesores: ${profesores[0]} & ${profesores[1]} </b> <br> <div class="progress">
+        <b>Estás en un peso ${global[1].condicion}</b> <b>Nuestra recomendación de actividad : ${global[1].actividadRecom} , que tiene intensidad: ${global[1].intensidad} <br> Profesores: ${profesores[0]} & ${profesores[1]} </b> <br> <div class="progress">
         <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Normal/ideal</span></div>
-      </div>`
+            </div>`
     } else if ((resultado > 25) && (resultado <= 29)) {
         divResultado.innerHTML =`<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con ${pesoActi[2].condicion}</b> .<b>Nuestra recomendación de actividad : ${pesoActi[2].actividadRecom} , que tiene intensidad: ${pesoActi[2].intensidad} <br> Profesores: ${profesores[0]}, ${profesores[1]} & ${profesores[3]} </b> <br> <div class="progress">
+        <b>Estás con ${global[2].condicion}</b> .<b>Nuestra recomendación de actividad : ${global[2].actividadRecom} , que tiene intensidad: ${global[2].intensidad} <br> Profesores: ${profesores[0]}, ${profesores[1]} & ${profesores[3]} </b> <br> <div class="progress">
         <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Sobre-Peso</span></div>
-      </div>`
+            </div>`
     } else if (resultado >= 30) {
         divResultado.innerHTML = `<b>Hola ${valorNombre}  su IMC es de  ${resultado}.
-        <b>Estás con  ${pesoActi[3].condicion}</b>. <b>Nuestra recomendación de actividad : ${pesoActi[3].actividadRecom} , que tiene intensidad: ${pesoActi[3].intensidad} <br> Profesor: ${profesores[2]}  </b> <br> <div class="progress">
+        <b>Estás con  ${global[3].condicion}</b>. <b>Nuestra recomendación de actividad : ${global[3].actividadRecom} , que tiene intensidad: ${global[3].intensidad} <br> Profesor: ${profesores[2]}  </b> <br> <div class="progress">
         <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Obesidad</span></div>
-      </div>`
+            </div>`
     } else {
         divResultado.innerHTML = ``;
     }
@@ -248,7 +249,7 @@ const getAltura = document.getElementById('inputAltura')
 
 
 $('#tituloApp').animate({
-    fontSize: '9rem'
+    fontSize: '7rem'
 }, 2000, () => {
     $('#tituloApp').animate({
         fontSize: '5rem'
@@ -265,12 +266,13 @@ fetch('../js/resultado.json')
     .then ((resp) => resp.json())
     
     .then ((data) => {
-    // console.log(data)
+    console.log(data)
 
         global = data
     
     })
 
 
-// PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/) -x
 
+
+// PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/) -x
