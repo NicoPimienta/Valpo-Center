@@ -1,4 +1,4 @@
-// ====== Entrega de Proyecto final 2° =========
+// ====== Entrega de Proyecto final 3° =========
 
 
 
@@ -6,31 +6,13 @@
 
 
 
-// Constructor & Arrays
+
+
+// Arrays
 
 const profesores = ['Victoria Amoroso', 'Geronimo Martin' , 'Luna Gancedo', 'Jonatan Demichelis']
 
-// borrar
 
-// class PesoRef {
-//     constructor (condicion,actividadRecom,intensidad) {
-//         this.condicion = condicion
-//         this.actividadRecom = actividadRecom
-//         this.intensidad = intensidad
-//     }
-    
-
-// }
-
-// Los valores de intensidad son aproximados y varian dependiendo la persona (Pienso aclararlo en algun lugar de la aplicación)
-
-// const pesoActi = [
-// new PesoRef ("Bajo de peso", "Entrenamiento Personalizado", "Media"),
-// new PesoRef ("Normal/Ideal", "Entrenamiento Funcional","Media-Alta"),
-// new PesoRef ("Sobre peso", "actividades aerobicas y de fuerza","Alta"),
-// new PesoRef ("Obesidad","Spinning o Entrenamiento Personalizado","Media-Alta"),
-// ]
-// localStorage.setItem('pesoActi', JSON.stringify(pesoActi))
 
 
 
@@ -89,7 +71,6 @@ const divResultado = document.createElement('div')
 divResultado.classList.add('card', 'col-12', 'bg-dark' , 'p-5')
 divResultado.style.display = 'none'
 divResultado.setAttribute("id" , "divResultado")
-// Implementar a lo ultimo : divResultado.innerHTML = `<i class="bi bi-info" data-bs-toggle="tooltip" data-bs-html="true" title="Los valores de intensidad son aproximados y varian dependiendo la persona" style="font-size: xx-large"></i>`
 formulario.append(divResultado)
 
 // Fade in para mostrar el resultado
@@ -167,7 +148,7 @@ const nivelPeso = (resultado , valorNombre) => {
         <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><span class ="fs-5">Obesidad</span></div>
             </div>`
     } else {
-        divResultado.innerHTML = ``;
+        divResultado.innerHTML = `Por favor ingrese peso y altura`;
     }
 }
 
@@ -275,4 +256,4 @@ fetch('../js/resultado.json')
 
 
 
-// PD: Ver ''progress'' de BS y ver como implementarlo. (https://getbootstrap.com/docs/5.0/components/progress/) -x
+
